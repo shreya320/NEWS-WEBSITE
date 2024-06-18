@@ -1,0 +1,240 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #1a1a2e; /* Dark Blue */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    color: #ffffff; /* White */
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.navbar-toggler {
+    display: none; 
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: #f5f5f5; /* Light Gray */
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff; /* White */
+    bottom: -5px; /* Distance from the text */
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.nav-link.active {
+    color: #ffffff; /* White */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-toggle:hover + .dropdown-menu {
+    display: block;
+}
+
+/* Search form styles */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-left: 47rem;
+    margin-right: 0.5rem;
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #f0a500; /* Gold */
+    background-color: #f0a500; /* Gold */
+    color: #ffffff; /* White */
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #c39b0c;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        display: block;
+        background-color: #343a40;
+        border: none;
+        color: #ffffff; /* White */
+        font-size: 1.25rem;
+    }
+
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #1a1a2e; 
+    height: 0.25rem; /* Updated height */
+}
+
+.navbar1 {
+    background-color: #1a1a2e; /* Dark Blue */
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.brand {
+    color: #ffffff; /* White */
+    font-size: 1rem;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 25%;
+    margin: 10px; /* Reduced margin */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+#newdetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(25% - 0.5rem); /* Adjust margin */
+    margin-bottom: 0.5rem; /* Reduced space between rows */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure card takes full height of column */
+}
+
+.card img {
+    height: 150px; /* Fixed height for image */
+    width: 100%;
+    object-fit: cover;
+}
+
+.card h5 {
+    font-size: 1rem; /* Reduced font size */
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.card h6 {
+    font-size: 0.875rem; /* Reduced font size */
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.card p {
+    font-size: 0.875rem; /* Reduced font size */
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.card a {
+    font-size: 0.875rem; /* Reduced font size */
+    padding: 0.3rem 0.75rem; /* Reduced padding */
+    margin-top: auto; /* Push the link to the bottom */
+}
